@@ -1,0 +1,47 @@
+import React from "react";
+// import { useState } from "react";
+import './App.css';
+import Card from "./Components/Card";
+
+class App extends React.Component {
+  data = [
+    { name: "Jeep", Cost: 20000, path: "./Images/181773-2560x1440-desktop-hd-jeep-wallpaper.jpg" },
+    { name: "Maserati", Cost: 109000, path: "./Images/189882-3840x2160-desktop-4k-maserati-wallpaper-image.jpg" },
+    { name: "Defender", Cost: 71325, path: "public/Images/land_rover_defender_110_v8_carpathian_edition_2021_7_4k_5k_hd_cars.jpg" },
+    { name: "Benz", Cost: 203500, path: "public/Images/wallpaperflare.com_wallpaper (1).jpg" },
+    { name: "Mustang", Cost: 61980, path: "public/Images/ford_mustang_dark_horse_2024_car_4k_8k_hd_cars.jpg" },
+    { name: "La Ferrari", Cost: `2.5 Million`, path: "public/Images/ferrari-laferrari-2311-1.jpg" },
+    { name: "911", Cost: 126100, path: "public/Images/223804-1002119-car-20240229-133423-992-gt3rs-11.webp" },
+    { name: "GT3-RS", Cost: 241300, path: "public/Images/10809944.webp" },
+    { name: "G-Wagon", Cost: 180150, path: "public/Images/wallpaperflare.com_wallpaper.jpg" },
+    { name: "Lamborghini", Cost: 507379, path: "public/Images/lambo.jpg" },
+
+
+
+
+
+  ]
+
+
+
+  render() {
+    return (
+      <div className="container">
+        <div className="nav">Premium Cars</div>
+        <div className="main">
+          {
+            this.data.map((dt, index) =>
+              <div className="card" key={index}>
+                <Card name={dt.name} cost={dt.Cost} path={dt.path} />)
+          }
+
+              </div>
+        
+
+
+      </div>
+        );
+  }
+}
+
+        export default App;
