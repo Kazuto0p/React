@@ -1,3 +1,56 @@
+
+### Differences Between npm and npx
+
+- **Purpose**:
+  - **npm**: Manages and installs JavaScript packages and dependencies.
+  - **npx**: Executes Node.js packages without permanent installation.
+
+- **Functionality**:
+  - **npm**: Installs packages locally or globally, manages `package.json`, runs scripts.
+  - **npx**: Runs package binaries directly, downloads temporarily if needed.
+
+- **Installation**:
+  - **npm**: Permanently installs packages to `node_modules` or globally.
+  - **npx**: Avoids installation by running packages temporarily or from local `node_modules`.
+
+- **Use Case**:
+  - **npm**: Managing project dependencies, running defined scripts (e.g., `npm run build`).
+  - **npx**: One-off commands, testing tools, or running local binaries (e.g., `npx eslint .`).
+
+- **Global Impact**:
+  - **npm**: Can clutter system with global installs.
+  - **npx**: Avoids global installs, keeping the system clean.
+
+- **Example**:
+  - **npm**: `npm install express` (installs express package).
+  - **npx**: `npx create-react-app my-app` (runs create-react-app without global install).
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 **npm** (Node Package Manager) and **npx** are both tools that come with Node.js, but they serve different purposes:
 
 ### **npm**
