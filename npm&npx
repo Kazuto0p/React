@@ -1,0 +1,56 @@
+**npm** (Node Package Manager) and **npx** are both tools that come with Node.js, but they serve different purposes:
+
+### **npm**
+- **Purpose**: Package manager for installing, managing, and sharing JavaScript packages (libraries, frameworks, etc.).
+- **Key Functions**:
+  - Installs packages globally or locally to a project (e.g., `npm install <package>`).
+  - Manages dependencies in `package.json`.
+  - Runs scripts defined in `package.json` (e.g., `npm run build`).
+  - Publishes packages to the npm registry.
+- **Usage Example**:
+  ```bash
+  npm install express
+  ```
+  This installs the `express` package locally in the project's `node_modules` folder.
+- **Behavior**: Packages are installed and stored for repeated use in your project or globally on your system.
+
+### **npx**
+- **Purpose**: Executes Node.js packages, either from the npm registry or locally, without needing to install them globally or permanently.
+- **Key Functions**:
+  - Runs a package's executable directly, downloading it temporarily if not already installed (e.g., `npx create-react-app my-app`).
+  - Executes binaries from locally installed packages in `node_modules` without needing global installation.
+  - Useful for one-off commands or trying tools without cluttering your system.
+- **Usage Example**:
+  ```bash
+  npx create-react-app my-app
+  ```
+  This downloads and runs `create-react-app` to scaffold a new React project, then discards it unless cached.
+- **Behavior**: Temporarily downloads and runs a package, or uses a local version if available, avoiding global installs.
+
+### **Key Differences**
+| Feature                  | npm                                      | npx                                      |
+|--------------------------|------------------------------------------|------------------------------------------|
+| **Primary Role**         | Installs and manages packages            | Executes packages without installation   |
+| **Installation**         | Installs packages for use in projects    | Runs packages without permanent install  |
+| **Use Case**             | Managing dependencies, running scripts   | One-off commands, running local binaries |
+| **Global Impact**        | Can install globally or locally          | Avoids global installs, runs temporarily |
+| **Example Command**      | `npm install -g eslint`                  | `npx eslint .`                           |
+
+### **When to Use**
+- Use **npm** to install and manage dependencies for your project or to run scripts defined in `package.json`.
+- Use **npx** to execute a package once, test a tool, or run a local package's binary without polluting your global environment.
+
+### **Practical Example**
+- With **npm**:
+  ```bash
+  npm install -g create-react-app
+  create-react-app my-app
+  ```
+  Installs `create-react-app` globally, then runs it.
+- With **npx**:
+  ```bash
+  npx create-react-app my-app
+  ```
+  Runs `create-react-app` without installing it globally, downloading it temporarily if needed.
+
+**Summary**: npm is for managing and installing packages; npx is for executing them conveniently, often without installation.
